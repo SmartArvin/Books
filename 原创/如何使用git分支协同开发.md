@@ -70,7 +70,7 @@
 >
 > 如果没有冲突文件，在merge过程中会出现如下界面（中/英文）：
 >
-> ![merge](F:\Android三组资源共享\技术文档资料汇总\git操作相关资料\如何使用git分支协同开发\md\merge.png)
+> ![merge](https://github.com/SmartArvin/Books/blob/master/pic/merge.png)
 >
 > 该界面需要操作者编辑commit信息，编辑操作如下：
 >
