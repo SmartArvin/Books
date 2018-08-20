@@ -18,7 +18,7 @@
 
 [串口调试技巧分享](https://github.com/SmartArvin/Books/blob/master/%E5%8E%9F%E5%88%9B/%E4%B8%B2%E5%8F%A3%E8%B0%83%E8%AF%95%E6%8A%80%E5%B7%A7%E5%88%86%E4%BA%AB.pdf)
 
-WiFi调试常用命令
+[WiFi调试常用命令](https://github.com/SmartArvin/Books/blob/master/%E5%8E%9F%E5%88%9B/WiFi%E8%B0%83%E8%AF%95%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4.md)
 
 
 
