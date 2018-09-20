@@ -32,7 +32,7 @@
 
 #### [WiFi调试常用命令](https://github.com/SmartArvin/Books/blob/master/%E5%8E%9F%E5%88%9B/WiFi%E8%B0%83%E8%AF%95%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4.md)
 
-
+#### [Android应用静默安装方法整理](https://github.com/SmartArvin/Books/blob/master/%E5%8E%9F%E5%88%9B/Android%E5%BA%94%E7%94%A8%E9%9D%99%E9%BB%98%E5%AE%89%E8%A3%85%E6%96%B9%E6%B3%95%E6%95%B4%E7%90%86.md)
 
 ### 整理
 
