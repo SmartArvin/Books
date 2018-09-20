@@ -198,3 +198,5 @@ public void installApkBySilentIPm(String apkPath) {
 ```
 
 以上业务需要AIDL辅助实现，需要将IPackageManager.aidl等必要源码支持，具体可见demo
+
+[APKInstallSlientDemo](https://github.com/SmartArvin/Demos/tree/master/APK%E9%9D%99%E9%BB%98%E5%AE%89%E8%A3%85/APKInstallSlientDemo)
