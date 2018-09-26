@@ -1,0 +1,48 @@
+无人职守安装系统补丁!
+
+
+我曾经跟老师一起维护计算机,下载了很多补丁,苦于安装时体力劳动,在网上查找资料后,写出以下批处理.
+不能算原创,但总可解脱有相同经历的人摆脱苦海!!
+
+用法:把下边的代码保存为.bat文件,然后和补丁放到同一文件夹内,运行即可!
+
+第一个:
+
+QUOTE:
+@echo off
+title 系统补丁批量自动安装
+color 1f
+cls
+echo 补丁安装中......
+echo.
+for %%i in (*.exe) do %%i /passive /norestart /nobackup
+echo 补丁已经全部安装完毕！
+echo 请按任意键重启电脑！
+echo ......
+PAUSE >nul
+shutdown -r
+第二个: (没什么创新,只是增加了时间显示,用于了解安装所用的时间!)
+
+QUOTE:
+@echo off
+title 系统补丁批量自动安装
+color 1f
+cls
+MODE con: COLS=60 LINES=25
+set tm1=%time:~0,2%
+set tm2=%time:~3,2%
+set tm3=%time:~6,2%
+ECHO %date% %tm1%点%tm2%分%tm3%秒 
+echo 补丁安装中......
+echo.
+for %%i in (*.exe) do %%i /passive /norestart /nobackup
+ECHO %date% %tm1%点%tm2%分%tm3%秒
+echo 补丁已经全部安装完毕！
+echo 请按任意键重启电脑！
+echo ......
+PAUSE >nul
+shutdown -r
+对于上面的我自感不满意,由于自身技术不过关,不能编出称心的实现.
+现说出自己的想法,盼高手给予指导,不胜感激!
+1:如何实现30秒无操作自动进行关机操作(我设置了手工执行的方法,感觉不好)
+2:如何在不增加冗余代码的情况下打印出正在安装的补丁名称(我的实现方法,不能打印正在进行的补丁.)
