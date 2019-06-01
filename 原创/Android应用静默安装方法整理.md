@@ -200,3 +200,55 @@ public void installApkBySilentIPm(String apkPath) {
 以上业务需要AIDL辅助实现，需要将IPackageManager.aidl等必要源码支持，具体可见demo
 
 [APKInstallSlientDemo](https://github.com/SmartArvin/Demos/tree/master/APK%E9%9D%99%E9%BB%98%E5%AE%89%E8%A3%85/APKInstallSlientDemo)
+
+
+
+### 四、Android7.0及8.0实现静默安装
+
+```
+/**
+ * 适用于7.0及以上系统静默安装APK
+ * @param apkPath(目标APK文件位置)
+ * @param curPkgName(当前应用package name)
+ * @return boolean
+ */
+public boolean silentInstall(String apkPath, String curPkgName) {
+    String[] args = new String[] { "pm", "install", "-r", "-i",
+            curPkgName, "--user", "0", apkPath };
+    String result = "EMPTY";
+    ProcessBuilder processBuilder = new ProcessBuilder(args);
+    Process process = null;
+    InputStream inIs = null;
+    try {
+        ByteArrayOutputStream baos = new ByteArrayOutputStream();
+        int read = -1;
+        process = processBuilder.start();
+        baos.write('/');
+        inIs = process.getInputStream();
+        while ((read = inIs.read()) != -1) {
+            baos.write(read);
+        }
+        byte[] data = baos.toByteArray();
+        result = new String(data, "utf_8");
+        baos.close();
+    } catch (IOException e) {
+        e.printStackTrace();
+    } finally {
+        try {
+            if (inIs != null) {
+                inIs.close();
+            }
+        } catch (IOException e) {
+        }
+        if (process != null) {
+            process.destroy();
+        }
+    }
+    return result.contains("Success");
+}
+```
+
+
+
+
+
